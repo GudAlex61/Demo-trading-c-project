@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-#include "MakinAPosition.h"
+#include "MakingAPosition.h"
 Positon MakingPosition(){
     std::string tokenName = chooseToken();
     int shoulder = chooseShoulder();

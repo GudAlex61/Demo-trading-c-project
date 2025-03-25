@@ -10,7 +10,6 @@ Positon MakingPosition(){
     return newPosition;
 }
 
-
 Positon::Positon(std::string tokenName, int shoulder, double margin, double entryPrice){
     this->tokenName = tokenName;
     this->shoulder = shoulder;
@@ -78,8 +77,8 @@ std::string chooseToken(){
         return tokenName;
         break;
     default:
-        std::cout << "Введено неправильное число!";
-        tokenName = "Error";
+        std::cout << "Введено неправильное число! \n\n";
+        tokenName = chooseToken();
         return tokenName;
         break;
     }
@@ -102,5 +101,5 @@ double chooseMargin(){
     if (margin >= 1 && margin <= 1000000){
         return margin;
     }
-    return 0;
+    return -1;
 }

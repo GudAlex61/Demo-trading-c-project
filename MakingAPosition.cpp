@@ -1,19 +1,32 @@
 #include <string>
 #include <iostream>
+#include <ctime>
+#include <chrono>
 #include "MakingAPosition.h"
+#include "api.h"
 Positon MakingPosition(){
     std::string tokenName = chooseToken();
+    bool isLong = chooseLong();
     int shoulder = chooseShoulder();
     double margin = chooseMargin();
-    double price=0;
-    Positon newPosition(tokenName, shoulder, margin, price);
+    auto now = std::chrono::system_clock::now();
+    time_t start = std::chrono::system_clock::to_time_t(now);
+    double price = getCryptoPrice(tokenName);
+    if (shoulder == -1 || margin == -1 || price == 0){
+        Positon newPosition("invalid", 0, 0, 0, 0, 0);
+        return newPosition;
+    }
+    Positon newPosition(tokenName, shoulder, margin, isLong, start, price);
+    std::cout << "Позиция успешно создана!" << std::endl << std::endl; 
     return newPosition;
 }
 
-Positon::Positon(std::string tokenName, int shoulder, double margin, double entryPrice){
+Positon::Positon(std::string tokenName, int shoulder, double margin, bool isLong, time_t start, double entryPrice){
     this->tokenName = tokenName;
     this->shoulder = shoulder;
     this->margin = margin;
+    this->isLong = isLong;
+    this->start = start;
     this->entryPrice = entryPrice;
 }
 
@@ -21,6 +34,8 @@ Positon::Positon(){
     this->tokenName = "default";
     this->shoulder = 0;
     this->margin = 0;
+    this->isLong = true;
+    this->start = 0;
     this->entryPrice = 0;
 }
 
@@ -28,6 +43,19 @@ Positon::~Positon()
 {
 }
 
+std::ostream& operator<<(std::ostream& os,  const Positon& position){
+    std::tm* locale_time = std::localtime(&position.start);
+    char buffer[80];
+    std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", locale_time);
+    std::string isLong;
+    if (position.isLong){
+        isLong = "Long";
+    } else {
+        isLong = "Short";
+    }
+    os << "Время открытия: "<< buffer << " Название монеты: " << position.tokenName << " Цена входа: " << position.entryPrice << "$ " << isLong << " Маржа: " << position.margin << "$ Плечо: " << position.shoulder;
+    return os;
+}
 int Positon::getShoulder(){
     return shoulder;
 }
@@ -39,8 +67,16 @@ double Positon::getEnrtyPrice(){
     return entryPrice;
 }
 
+time_t Positon::getStart(){
+    return start;
+}
+
 double Positon::getMargin(){
     return margin;
+}
+
+bool Positon::getIsLong(){
+    return isLong;
 }
 
 std::string chooseToken(){
@@ -57,15 +93,15 @@ std::string chooseToken(){
     switch (token)
     {
     case 1:
-        tokenName = "btc";
+        tokenName = "bitcoin";
         return tokenName;
         break;
     case 2:
-        tokenName = "etf";
+        tokenName = "ethereum";
         return tokenName;
         break;
     case 3:
-        tokenName = "sol";
+        tokenName = "solana";
         return tokenName;
         break;
     case 4:
@@ -88,7 +124,7 @@ int chooseShoulder(){
     std::cout << "Введите кредитное плечо 1-100: ";
     int shoulder;
     std::cin >> shoulder;
-    if (shoulder >= 1 && shoulder <= 100){
+    if (shoulder >= 1 && shoulder <= 1000){
         return shoulder;
     }
     return -1;
@@ -102,4 +138,16 @@ double chooseMargin(){
         return margin;
     }
     return -1;
+}
+
+bool chooseLong(){
+    std::cout << "Long или short?(1/0)" << std::endl;
+    int isLong;
+    std::cin >> isLong;
+    if (isLong == 0){
+        return false;
+    }
+    else{
+        return true;
+    }
 }

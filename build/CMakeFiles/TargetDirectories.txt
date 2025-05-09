@@ -1,0 +1,5 @@
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/CryptoTrader.dir
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/edit_cache.dir
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/rebuild_cache.dir
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/CryptoTrader_autogen_timestamp_deps.dir
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/CryptoTrader_autogen.dir

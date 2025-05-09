@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+62b123b63f3ac409b3d3453c579ac4fc CMakeFiles/CryptoTrader_autogen
+62b123b63f3ac409b3d3453c579ac4fc CMakeFiles/CryptoTrader_autogen_timestamp_deps
+843b75d9caa35abff7b4cc7844c1a674 CryptoTrader_autogen/timestamp

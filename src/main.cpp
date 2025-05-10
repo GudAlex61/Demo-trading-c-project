@@ -1,7 +1,15 @@
 #include <iostream>
 #include <QApplication>
 #include <QMainWindow>
+#include <QWidget>
+#include <QLabel>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QPushButton>
+#include <QMessageBox>
+#include <QTextStream>
+#include <QFile>
+#include <QLineEdit>
 #include "MakingAPosition.h"
 #include <vector>
 #include "api.h"
@@ -28,19 +36,48 @@ double calculatePnL(Positon& position) {
 
 int main(int argc, char *argv[]){
     QApplication app(argc, argv);
-
     QMainWindow window;
-    QPushButton button("Click me", &window);
 
-    window.setGeometry(100, 100, 300, 200);
-    button.setGeometry(50, 50, 100, 30);
-    QObject::connect(&button, &QPushButton::clicked, []() {
-        qDebug() << "Button clicked!";
-    });
+    QWidget *signInWidget = new QWidget(&window);
+    window.setCentralWidget(signInWidget);
+    window.setWindowTitle("Авторизация");
+    window.setFixedSize(400, 600);
+
+    QVBoxLayout *layout = new QVBoxLayout(signInWidget);
+
+
+    QLabel *label = new QLabel("SIGN IN", signInWidget);
+
+    QLineEdit *input1 = new QLineEdit(signInWidget);
+    QLineEdit *input2 = new QLineEdit(signInWidget);
+
+    QPushButton *btnSignIn = new QPushButton("Войти");
+
+    label->setAlignment(Qt::AlignCenter);
+    input1->setAlignment(Qt::AlignCenter);
+    input2->setAlignment(Qt::AlignCenter);
+    btnSignIn->setFixedSize(90, 30);
+    input1->setFixedSize(300, 25);
+    input2->setFixedSize(300, 25);
+
+    input1->setPlaceholderText("Введите вашу почту");
+    input2->setPlaceholderText("Введите пароль");
+
+    layout->addStretch();
+    layout->addWidget(label);
+    layout->addWidget(input1);
+    layout->addWidget(input2);
+    layout->addWidget(btnSignIn, 0, Qt::AlignHCenter);
+    layout->setAlignment(Qt::AlignHCenter);
+    layout->addStretch();
+
+    // layout->setContentsMargins(20, 20, 20, 20);
+    layout->setSpacing(15);
 
     window.show();
+
     return app.exec();
-    
+
     AuthManager Users("UsersDB");
 
     int UserID;

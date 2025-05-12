@@ -1,45 +1,63 @@
-cmake_minimum_required(VERSION 3.16)
-project(CryptoTrader)
+cmake_minimum_required(VERSION 3.10)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+project(DemoTrading LANGUAGES CXX)
+
+# Настройка для Qt
 set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
 
-# Main dependencies
-find_package(OpenSSL REQUIRED)
-find_package(SQLite3 REQUIRED)
+# Поиск необходимых пакетов
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 find_package(CURL REQUIRED)
-find_package(nlohmann_json 3.9.1 REQUIRED)
-find_package(Qt6 COMPONENTS Widgets REQUIRED)
 
-# Project sources
+# Включаем директории
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/demo-trading/include
+)
+
+# Добавляем исходные файлы
 set(SOURCES
-    src/main.cpp
-    src/MakingAPosition.cpp
+    demo-trading/main.cpp
     src/api.cpp
-    src/frontend.cpp
+    src/sql.cpp
+    src/MakingAPosition.cpp
+    demo-trading/login.cpp
+    demo-trading/authorization.cpp
 )
 
-add_executable(${PROJECT_NAME} ${SOURCES})
-
-# Include directories
-target_include_directories(${PROJECT_NAME} PRIVATE
-    ${CMAKE_SOURCE_DIR}/include
-    ${SQLite3_INCLUDE_DIRS}
-    ${CURL_INCLUDE_DIRS}
-    ${OPENSSL_INCLUDE_DIR}
-    ${Qt6_INCLUDE_DIRS}
+# Добавляем заголовочные файлы
+set(HEADERS
+    include/api.h
+    include/sql.h
+    include/MakingAPosition.h
+    demo-trading/login.h
+    demo-trading/authorization.h
 )
 
-# Linking
-target_link_libraries(${PROJECT_NAME} PRIVATE
-    SQLite::SQLite3
-    OpenSSL::SSL
-    OpenSSL::Crypto
-    CURL::libcurl
-    nlohmann_json::nlohmann_json
-    Qt6::Widgets 
-    pthread
+# Добавляем UI-формы
+set(FORMS
+    demo-trading/login.ui
+    demo-trading/authorization.ui
+)
+
+# Создаем исполняемый файл
+add_executable(DemoTrading
+    ${SOURCES}
+    ${HEADERS}
+    ${FORMS}
+)
+
+# Подключаем зависимости
+target_link_libraries(DemoTrading PRIVATE
+    Qt6::Core
+    Qt6::Widgets
+    ${CURL_LIBRARIES}
+)
+
+# Устанавливаем стандарт C++
+set_target_properties(DemoTrading PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
 )

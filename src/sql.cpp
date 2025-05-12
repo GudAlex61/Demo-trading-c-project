@@ -1,6 +1,7 @@
 #include "sqlite3.h"
 #include "MakingAPosition.h"
 #include "iomanip"
+#include "sql.h"
 #include <vector>
 
 class AuthManager {
@@ -11,14 +12,14 @@ public:
         if (sqlite3_open(db_name, &db) != SQLITE_OK) {
             throw std::runtime_error(sqlite3_errmsg(db));
         }
-        
-        const char* sql = 
+
+        const char* sql =
             "CREATE TABLE IF NOT EXISTS Users ("
             "id INTEGER PRIMARY KEY AUTOINCREMENT,"
             "email TEXT UNIQUE NOT NULL,"
             "password_hash TEXT NOT NULL,"
             "balance REAL NOT NULL DEFAULT 10000);";
-        
+
         char* err = nullptr;
         if (sqlite3_exec(db, sql, nullptr, nullptr, &err) != SQLITE_OK) {
             std::string error = err;
@@ -26,7 +27,7 @@ public:
             throw std::runtime_error(error);
         }
 
-        const char* sql2 = 
+        const char* sql2 =
             "CREATE TABLE IF NOT EXISTS trades ("
             "trade_id INTEGER PRIMARY KEY AUTOINCREMENT,"
             "user_id INTEGER,"
@@ -36,7 +37,7 @@ public:
             "isLong INTEGER,"
             "start INTEGER,"
             "entryPrice REAL);";
-        
+
         char* err2 = nullptr;
         if (sqlite3_exec(db, sql2, nullptr, nullptr, &err2) != SQLITE_OK) {
             std::string error = err2;
@@ -53,7 +54,7 @@ public:
         try {
             sqlite3_stmt* stmt;
             const char* sql = "SELECT tokenName, shoulder, margin, isLong, start, entryPrice FROM trades WHERE user_id = ?;";
-            
+
             if(sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
                 std::cout << "DataBase error getting trades" << std::endl;
             } else{
@@ -82,19 +83,19 @@ public:
     void saveBalance(int& UserID, double& balance) {
         sqlite3_stmt* stmt = nullptr;
         const char* sql = "UPDATE Users SET balance = ? WHERE id = ?;";
-        
+
         if(sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
             std::cerr << "Ошибка подготовки запроса: " << sqlite3_errmsg(db) << std::endl;
             return;
         }
-        
+
         sqlite3_bind_double(stmt, 1, balance);
         sqlite3_bind_int(stmt, 2, UserID);
-        
+
         if(sqlite3_step(stmt) != SQLITE_DONE) {
             std::cerr << "Ошибка обновления баланса: " << sqlite3_errmsg(db) << std::endl;
         }
-        
+
         sqlite3_finalize(stmt);
     }
 
@@ -104,7 +105,7 @@ public:
 
             const char* deleteTradesSQL = "DELETE FROM trades WHERE user_id = ?;";
 
-            
+
             sqlite3_stmt* stmt;
             char* errMsg = nullptr;
 
@@ -135,7 +136,7 @@ public:
                     sqlite3_bind_int(stmt, 5, pos.getIsLong());
                     sqlite3_bind_int64(stmt, 6, pos.getStart());
                     sqlite3_bind_double(stmt, 7, pos.getEntryPrice());
-                    
+
                     if(sqlite3_step(stmt) != SQLITE_DONE) {
                         std::cerr << "Trade save error: " << sqlite3_errmsg(db) << std::endl;
                     }
@@ -153,7 +154,7 @@ public:
         try {
 
             sqlite3_stmt* stmt;
-            
+
             const char* sql = "INSERT INTO Users (email, password_hash) VALUES (?, ?);";
             if(sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
                 std::cout << "Error while registering" << std::endl;
@@ -185,14 +186,14 @@ public:
         try {
             sqlite3_stmt* stmt;
             const char* sql = "SELECT id, password_hash, balance FROM Users WHERE email = ?;";
-            
+
             if(sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
                 std::cout << "DataBase error" << std::endl;
                 return 0;
             }
 
             sqlite3_bind_text(stmt, 1, email.c_str(), -1, SQLITE_TRANSIENT);
-            
+
             if(sqlite3_step(stmt) != SQLITE_ROW) {
                 sqlite3_finalize(stmt);
                 std::cout << "Invalid credentials" << std::endl;

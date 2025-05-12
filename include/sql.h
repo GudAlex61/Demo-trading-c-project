@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SQL_H
+#define SQL_H
 
 #include "sqlite3.h"
 #include "MakingAPosition.h"
@@ -19,3 +20,5 @@ public:
     int registerUser(std::string email, std::string password, double& balance, int& UserID);
     int loginUser(std::string email, std::string password, double& balance, int& UserID);
 };
+
+#endif // SQL_H

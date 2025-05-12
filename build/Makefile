@@ -117,74 +117,146 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CryptoTrader
+# Target rules for targets named DemoTrading
 
 # Build rule for target.
-CryptoTrader: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CryptoTrader
-.PHONY : CryptoTrader
+DemoTrading: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DemoTrading
+.PHONY : DemoTrading
 
 # fast build rule for target.
-CryptoTrader/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/build
-.PHONY : CryptoTrader/fast
+DemoTrading/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/build
+.PHONY : DemoTrading/fast
 
 #=============================================================================
-# Target rules for targets named CryptoTrader_autogen_timestamp_deps
+# Target rules for targets named DemoTrading_autogen_timestamp_deps
 
 # Build rule for target.
-CryptoTrader_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CryptoTrader_autogen_timestamp_deps
-.PHONY : CryptoTrader_autogen_timestamp_deps
+DemoTrading_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DemoTrading_autogen_timestamp_deps
+.PHONY : DemoTrading_autogen_timestamp_deps
 
 # fast build rule for target.
-CryptoTrader_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader_autogen_timestamp_deps.dir/build.make CMakeFiles/CryptoTrader_autogen_timestamp_deps.dir/build
-.PHONY : CryptoTrader_autogen_timestamp_deps/fast
+DemoTrading_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/build.make CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/build
+.PHONY : DemoTrading_autogen_timestamp_deps/fast
 
 #=============================================================================
-# Target rules for targets named CryptoTrader_autogen
+# Target rules for targets named DemoTrading_autogen
 
 # Build rule for target.
-CryptoTrader_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CryptoTrader_autogen
-.PHONY : CryptoTrader_autogen
+DemoTrading_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DemoTrading_autogen
+.PHONY : DemoTrading_autogen
 
 # fast build rule for target.
-CryptoTrader_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader_autogen.dir/build.make CMakeFiles/CryptoTrader_autogen.dir/build
-.PHONY : CryptoTrader_autogen/fast
+DemoTrading_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading_autogen.dir/build.make CMakeFiles/DemoTrading_autogen.dir/build
+.PHONY : DemoTrading_autogen/fast
 
-CryptoTrader_autogen/mocs_compilation.o: CryptoTrader_autogen/mocs_compilation.cpp.o
-.PHONY : CryptoTrader_autogen/mocs_compilation.o
+DemoTrading_autogen/mocs_compilation.o: DemoTrading_autogen/mocs_compilation.cpp.o
+.PHONY : DemoTrading_autogen/mocs_compilation.o
 
 # target to build an object file
-CryptoTrader_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/CryptoTrader_autogen/mocs_compilation.cpp.o
-.PHONY : CryptoTrader_autogen/mocs_compilation.cpp.o
+DemoTrading_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o
+.PHONY : DemoTrading_autogen/mocs_compilation.cpp.o
 
-CryptoTrader_autogen/mocs_compilation.i: CryptoTrader_autogen/mocs_compilation.cpp.i
-.PHONY : CryptoTrader_autogen/mocs_compilation.i
+DemoTrading_autogen/mocs_compilation.i: DemoTrading_autogen/mocs_compilation.cpp.i
+.PHONY : DemoTrading_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-CryptoTrader_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/CryptoTrader_autogen/mocs_compilation.cpp.i
-.PHONY : CryptoTrader_autogen/mocs_compilation.cpp.i
+DemoTrading_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.i
+.PHONY : DemoTrading_autogen/mocs_compilation.cpp.i
 
-CryptoTrader_autogen/mocs_compilation.s: CryptoTrader_autogen/mocs_compilation.cpp.s
-.PHONY : CryptoTrader_autogen/mocs_compilation.s
+DemoTrading_autogen/mocs_compilation.s: DemoTrading_autogen/mocs_compilation.cpp.s
+.PHONY : DemoTrading_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-CryptoTrader_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/CryptoTrader_autogen/mocs_compilation.cpp.s
-.PHONY : CryptoTrader_autogen/mocs_compilation.cpp.s
+DemoTrading_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.s
+.PHONY : DemoTrading_autogen/mocs_compilation.cpp.s
+
+demo-trading/authorization.o: demo-trading/authorization.cpp.o
+.PHONY : demo-trading/authorization.o
+
+# target to build an object file
+demo-trading/authorization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o
+.PHONY : demo-trading/authorization.cpp.o
+
+demo-trading/authorization.i: demo-trading/authorization.cpp.i
+.PHONY : demo-trading/authorization.i
+
+# target to preprocess a source file
+demo-trading/authorization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.i
+.PHONY : demo-trading/authorization.cpp.i
+
+demo-trading/authorization.s: demo-trading/authorization.cpp.s
+.PHONY : demo-trading/authorization.s
+
+# target to generate assembly for a file
+demo-trading/authorization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.s
+.PHONY : demo-trading/authorization.cpp.s
+
+demo-trading/login.o: demo-trading/login.cpp.o
+.PHONY : demo-trading/login.o
+
+# target to build an object file
+demo-trading/login.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o
+.PHONY : demo-trading/login.cpp.o
+
+demo-trading/login.i: demo-trading/login.cpp.i
+.PHONY : demo-trading/login.i
+
+# target to preprocess a source file
+demo-trading/login.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.i
+.PHONY : demo-trading/login.cpp.i
+
+demo-trading/login.s: demo-trading/login.cpp.s
+.PHONY : demo-trading/login.s
+
+# target to generate assembly for a file
+demo-trading/login.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.s
+.PHONY : demo-trading/login.cpp.s
+
+demo-trading/main.o: demo-trading/main.cpp.o
+.PHONY : demo-trading/main.o
+
+# target to build an object file
+demo-trading/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o
+.PHONY : demo-trading/main.cpp.o
+
+demo-trading/main.i: demo-trading/main.cpp.i
+.PHONY : demo-trading/main.i
+
+# target to preprocess a source file
+demo-trading/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.i
+.PHONY : demo-trading/main.cpp.i
+
+demo-trading/main.s: demo-trading/main.cpp.s
+.PHONY : demo-trading/main.s
+
+# target to generate assembly for a file
+demo-trading/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.s
+.PHONY : demo-trading/main.cpp.s
 
 src/MakingAPosition.o: src/MakingAPosition.cpp.o
 .PHONY : src/MakingAPosition.o
 
 # target to build an object file
 src/MakingAPosition.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/MakingAPosition.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o
 .PHONY : src/MakingAPosition.cpp.o
 
 src/MakingAPosition.i: src/MakingAPosition.cpp.i
@@ -192,7 +264,7 @@ src/MakingAPosition.i: src/MakingAPosition.cpp.i
 
 # target to preprocess a source file
 src/MakingAPosition.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/MakingAPosition.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.i
 .PHONY : src/MakingAPosition.cpp.i
 
 src/MakingAPosition.s: src/MakingAPosition.cpp.s
@@ -200,7 +272,7 @@ src/MakingAPosition.s: src/MakingAPosition.cpp.s
 
 # target to generate assembly for a file
 src/MakingAPosition.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/MakingAPosition.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.s
 .PHONY : src/MakingAPosition.cpp.s
 
 src/api.o: src/api.cpp.o
@@ -208,7 +280,7 @@ src/api.o: src/api.cpp.o
 
 # target to build an object file
 src/api.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/api.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/src/api.cpp.o
 .PHONY : src/api.cpp.o
 
 src/api.i: src/api.cpp.i
@@ -216,7 +288,7 @@ src/api.i: src/api.cpp.i
 
 # target to preprocess a source file
 src/api.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/api.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/src/api.cpp.i
 .PHONY : src/api.cpp.i
 
 src/api.s: src/api.cpp.s
@@ -224,56 +296,32 @@ src/api.s: src/api.cpp.s
 
 # target to generate assembly for a file
 src/api.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/api.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/src/api.cpp.s
 .PHONY : src/api.cpp.s
 
-src/frontend.o: src/frontend.cpp.o
-.PHONY : src/frontend.o
+src/sql.o: src/sql.cpp.o
+.PHONY : src/sql.o
 
 # target to build an object file
-src/frontend.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/frontend.cpp.o
-.PHONY : src/frontend.cpp.o
+src/sql.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/src/sql.cpp.o
+.PHONY : src/sql.cpp.o
 
-src/frontend.i: src/frontend.cpp.i
-.PHONY : src/frontend.i
-
-# target to preprocess a source file
-src/frontend.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/frontend.cpp.i
-.PHONY : src/frontend.cpp.i
-
-src/frontend.s: src/frontend.cpp.s
-.PHONY : src/frontend.s
-
-# target to generate assembly for a file
-src/frontend.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/frontend.cpp.s
-.PHONY : src/frontend.cpp.s
-
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/sql.i: src/sql.cpp.i
+.PHONY : src/sql.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/sql.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/src/sql.cpp.i
+.PHONY : src/sql.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/sql.s: src/sql.cpp.s
+.PHONY : src/sql.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CryptoTrader.dir/build.make CMakeFiles/CryptoTrader.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/sql.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/src/sql.cpp.s
+.PHONY : src/sql.cpp.s
 
 # Help Target
 help:
@@ -283,24 +331,30 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CryptoTrader_autogen"
-	@echo "... CryptoTrader_autogen_timestamp_deps"
-	@echo "... CryptoTrader"
-	@echo "... CryptoTrader_autogen/mocs_compilation.o"
-	@echo "... CryptoTrader_autogen/mocs_compilation.i"
-	@echo "... CryptoTrader_autogen/mocs_compilation.s"
+	@echo "... DemoTrading_autogen"
+	@echo "... DemoTrading_autogen_timestamp_deps"
+	@echo "... DemoTrading"
+	@echo "... DemoTrading_autogen/mocs_compilation.o"
+	@echo "... DemoTrading_autogen/mocs_compilation.i"
+	@echo "... DemoTrading_autogen/mocs_compilation.s"
+	@echo "... demo-trading/authorization.o"
+	@echo "... demo-trading/authorization.i"
+	@echo "... demo-trading/authorization.s"
+	@echo "... demo-trading/login.o"
+	@echo "... demo-trading/login.i"
+	@echo "... demo-trading/login.s"
+	@echo "... demo-trading/main.o"
+	@echo "... demo-trading/main.i"
+	@echo "... demo-trading/main.s"
 	@echo "... src/MakingAPosition.o"
 	@echo "... src/MakingAPosition.i"
 	@echo "... src/MakingAPosition.s"
 	@echo "... src/api.o"
 	@echo "... src/api.i"
 	@echo "... src/api.s"
-	@echo "... src/frontend.o"
-	@echo "... src/frontend.i"
-	@echo "... src/frontend.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/sql.o"
+	@echo "... src/sql.i"
+	@echo "... src/sql.s"
 .PHONY : help
 
 

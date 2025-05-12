@@ -10,6 +10,7 @@ set(CMAKE_AUTORCC ON)
 # Поиск необходимых пакетов
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 find_package(CURL REQUIRED)
+find_package(SQLite3 REQUIRED)
 
 # Включаем директории
 include_directories(
@@ -54,6 +55,7 @@ target_link_libraries(DemoTrading PRIVATE
     Qt6::Core
     Qt6::Widgets
     ${CURL_LIBRARIES}
+    SQLite::SQLite3
 )
 
 # Устанавливаем стандарт C++

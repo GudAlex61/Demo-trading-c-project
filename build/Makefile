@@ -251,6 +251,30 @@ demo-trading/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.s
 .PHONY : demo-trading/main.cpp.s
 
+demo-trading/registration.o: demo-trading/registration.cpp.o
+.PHONY : demo-trading/registration.o
+
+# target to build an object file
+demo-trading/registration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o
+.PHONY : demo-trading/registration.cpp.o
+
+demo-trading/registration.i: demo-trading/registration.cpp.i
+.PHONY : demo-trading/registration.i
+
+# target to preprocess a source file
+demo-trading/registration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.i
+.PHONY : demo-trading/registration.cpp.i
+
+demo-trading/registration.s: demo-trading/registration.cpp.s
+.PHONY : demo-trading/registration.s
+
+# target to generate assembly for a file
+demo-trading/registration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.s
+.PHONY : demo-trading/registration.cpp.s
+
 src/MakingAPosition.o: src/MakingAPosition.cpp.o
 .PHONY : src/MakingAPosition.o
 
@@ -346,6 +370,9 @@ help:
 	@echo "... demo-trading/main.o"
 	@echo "... demo-trading/main.i"
 	@echo "... demo-trading/main.s"
+	@echo "... demo-trading/registration.o"
+	@echo "... demo-trading/registration.i"
+	@echo "... demo-trading/registration.s"
 	@echo "... src/MakingAPosition.o"
 	@echo "... src/MakingAPosition.i"
 	@echo "... src/MakingAPosition.s"

@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/authorization.cpp" "CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o" "gcc" "CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o.d"
   "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/login.cpp" "CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o" "gcc" "CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o.d"
   "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/main.cpp" "CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o" "gcc" "CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o.d"
+  "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.cpp" "CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o" "gcc" "CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o.d"
   "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/MakingAPosition.cpp" "CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o" "gcc" "CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o.d"
   "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/api.cpp" "CMakeFiles/DemoTrading.dir/src/api.cpp.o" "gcc" "CMakeFiles/DemoTrading.dir/src/api.cpp.o.d"
   "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/sql.cpp" "CMakeFiles/DemoTrading.dir/src/sql.cpp.o" "gcc" "CMakeFiles/DemoTrading.dir/src/sql.cpp.o.d"

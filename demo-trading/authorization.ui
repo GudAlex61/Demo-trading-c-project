@@ -11,16 +11,16 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Authorization</string>
+   <string>Demo-Trading</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>185</y>
+      <y>243</y>
       <width>200</width>
-      <height>115</height>
+      <height>114</height>
      </rect>
     </property>
     <property name="title">

@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Build"
+			"value" : "Debug"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build"
+			"value" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/unknown-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -222,22 +222,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_CXX_FLAGS_BUILD",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the CXX compiler during BUILD builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
 			"name" : "CMAKE_CXX_FLAGS_DEBUG",
 			"properties" : 
 			[
@@ -382,22 +366,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_EXE_LINKER_FLAGS_BUILD",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during BUILD builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS_DEBUG",
 			"properties" : 
 			[
@@ -487,7 +455,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/unknown-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -890,22 +858,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_MODULE_LINKER_FLAGS_BUILD",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of modules during BUILD builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS_DEBUG",
 			"properties" : 
 			[
@@ -1087,7 +1039,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/.qtc/package-manager/auto-setup.cmake"
+			"value" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/unknown-Debug/.qtc/package-manager/auto-setup.cmake"
 		},
 		{
 			"name" : "CMAKE_PROJECT_NAME",
@@ -1156,22 +1108,6 @@
 				{
 					"name" : "HELPSTRING",
 					"value" : "Flags used by the linker during the creation of shared libraries during all build types."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_SHARED_LINKER_FLAGS_BUILD",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of shared libraries during BUILD builds."
 				}
 			],
 			"type" : "STRING",
@@ -1284,22 +1220,6 @@
 				{
 					"name" : "HELPSTRING",
 					"value" : "Flags used by the linker during the creation of static libraries during all build types."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_STATIC_LINKER_FLAGS_BUILD",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during BUILD builds."
 				}
 			],
 			"type" : "STRING",
@@ -1503,7 +1423,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build"
+			"value" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/unknown-Debug"
 		},
 		{
 			"name" : "DemoTrading_IS_TOP_LEVEL",
@@ -1552,6 +1472,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_SQLite3",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding SQLite3"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/usr/include][/usr/lib/x86_64-linux-gnu/libsqlite3.so][v3.45.1()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -6972,6 +6904,38 @@
 			],
 			"type" : "PATH",
 			"value" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6"
+		},
+		{
+			"name" : "SQLite3_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "SQLite3_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so"
 		},
 		{
 			"name" : "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE",

@@ -1,7 +1,7 @@
 #include "login.h"
 #include "ui_login.h"
 #include <QMessageBox>
-#include "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/include/sql.h"
+#include "sql.h"
 #include "sqlite3.h"
 
 login::login(QWidget *parent)

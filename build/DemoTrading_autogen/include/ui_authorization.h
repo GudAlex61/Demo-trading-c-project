@@ -42,7 +42,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(100, 185, 200, 115));
+        groupBox->setGeometry(QRect(100, 243, 200, 114));
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(10, 30, 171, 71));
@@ -75,7 +75,7 @@ public:
 
     void retranslateUi(QMainWindow *Authorization)
     {
-        Authorization->setWindowTitle(QCoreApplication::translate("Authorization", "Authorization", nullptr));
+        Authorization->setWindowTitle(QCoreApplication::translate("Authorization", "Demo-Trading", nullptr));
         groupBox->setTitle(QCoreApplication::translate("Authorization", "\320\220\320\262\321\202\320\276\321\200\320\270\320\267\320\260\321\206\320\270\321\217", nullptr));
         pushButton->setText(QCoreApplication::translate("Authorization", "\320\222\321\205\320\276\320\264", nullptr));
         regButton->setText(QCoreApplication::translate("Authorization", "\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));

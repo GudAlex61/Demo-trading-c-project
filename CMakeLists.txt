@@ -15,7 +15,8 @@ find_package(SQLite3 REQUIRED)
 # Включаем директории
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/demo-trading/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/demo-trading
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
 # Добавляем исходные файлы
@@ -26,6 +27,7 @@ set(SOURCES
     src/MakingAPosition.cpp
     demo-trading/login.cpp
     demo-trading/authorization.cpp
+    demo-trading/registration.cpp
 )
 
 # Добавляем заголовочные файлы
@@ -35,12 +37,14 @@ set(HEADERS
     include/MakingAPosition.h
     demo-trading/login.h
     demo-trading/authorization.h
+    demo-trading/registration.h
 )
 
 # Добавляем UI-формы
 set(FORMS
     demo-trading/login.ui
     demo-trading/authorization.ui
+    demo-trading/registration.ui
 )
 
 # Создаем исполняемый файл

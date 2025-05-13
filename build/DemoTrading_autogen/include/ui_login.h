@@ -42,7 +42,7 @@ public:
         login->resize(400, 600);
         groupBox = new QGroupBox(login);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(110, 180, 206, 125));
+        groupBox->setGeometry(QRect(100, 240, 200, 120));
         verticalLayout_2 = new QVBoxLayout(groupBox);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout = new QVBoxLayout();
@@ -93,7 +93,7 @@ public:
 
     void retranslateUi(QDialog *login)
     {
-        login->setWindowTitle(QCoreApplication::translate("login", "Dialog", nullptr));
+        login->setWindowTitle(QCoreApplication::translate("login", "Demo-Trading", nullptr));
         groupBox->setTitle(QCoreApplication::translate("login", "\320\222\321\205\320\276\320\264", nullptr));
         label->setText(QCoreApplication::translate("login", "\320\233\320\276\320\263\320\270\320\275", nullptr));
         log->setText(QString());

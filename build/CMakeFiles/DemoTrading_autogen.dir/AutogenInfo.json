@@ -174,7 +174,10 @@
 		"/usr/share/cmake-3.28/Modules/FindPkgConfig.cmake",
 		"/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
 		"/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake",
-		"/usr/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake"
+		"/usr/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake",
+		"/usr/share/cmake-3.28/Modules/FindSQLite3.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project",
 	"DEP_FILE" : "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/DemoTrading_autogen/deps",
@@ -191,6 +194,12 @@
 			"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/login.h",
 			"MU",
 			"3VBIQUZVAT/moc_login.cpp",
+			null
+		],
+		[
+			"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.h",
+			"MU",
+			"3VBIQUZVAT/moc_registration.cpp",
 			null
 		],
 		[
@@ -226,7 +235,8 @@
 	"MOC_INCLUDES" : 
 	[
 		"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/include",
-		"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/include",
+		"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading",
+		"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src",
 		"/usr/include/x86_64-linux-gnu/qt6/QtCore",
 		"/usr/include/x86_64-linux-gnu/qt6",
 		"/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++",
@@ -284,6 +294,11 @@
 		],
 		[
 			"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.cpp",
 			"MU",
 			null
 		],

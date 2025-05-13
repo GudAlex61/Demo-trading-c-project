@@ -1,6 +1,6 @@
 #include "authorization.h"
 #include "./ui_authorization.h"
-#include "/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/include/sql.h"
+#include "sql.h"
 #include "sqlite3.h"
 
 Authorization::Authorization(QWidget *parent)
@@ -23,7 +23,10 @@ void Authorization::on_pushButton_clicked()
 }
 
 
-void Authorization::on_pushButton_2_clicked()
+void Authorization::on_regButton_clicked()
 {
-
+    hide();
+    regWindow = new Registration(this);
+    regWindow->show();
 }
+

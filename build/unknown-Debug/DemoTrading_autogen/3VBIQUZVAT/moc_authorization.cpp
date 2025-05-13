@@ -30,7 +30,7 @@ struct qt_meta_stringdata_Authorization_t {
     char stringdata0[14];
     char stringdata1[22];
     char stringdata2[1];
-    char stringdata3[24];
+    char stringdata3[21];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Authorization_t::offsetsAndSizes) + ofs), len 
@@ -39,12 +39,12 @@ Q_CONSTINIT static const qt_meta_stringdata_Authorization_t qt_meta_stringdata_A
         QT_MOC_LITERAL(0, 13),  // "Authorization"
         QT_MOC_LITERAL(14, 21),  // "on_pushButton_clicked"
         QT_MOC_LITERAL(36, 0),  // ""
-        QT_MOC_LITERAL(37, 23)   // "on_pushButton_2_clicked"
+        QT_MOC_LITERAL(37, 20)   // "on_regButton_clicked"
     },
     "Authorization",
     "on_pushButton_clicked",
     "",
-    "on_pushButton_2_clicked"
+    "on_regButton_clicked"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -84,7 +84,7 @@ Q_CONSTINIT const QMetaObject Authorization::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<Authorization, std::true_type>,
         // method 'on_pushButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButton_2_clicked'
+        // method 'on_regButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -97,7 +97,7 @@ void Authorization::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         (void)_t;
         switch (_id) {
         case 0: _t->on_pushButton_clicked(); break;
-        case 1: _t->on_pushButton_2_clicked(); break;
+        case 1: _t->on_regButton_clicked(); break;
         default: ;
         }
     }

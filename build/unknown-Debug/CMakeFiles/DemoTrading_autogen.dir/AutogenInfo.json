@@ -197,6 +197,12 @@
 			null
 		],
 		[
+			"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/mainwindow.h",
+			"MU",
+			"3VBIQUZVAT/moc_mainwindow.cpp",
+			null
+		],
+		[
 			"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.h",
 			"MU",
 			"3VBIQUZVAT/moc_registration.cpp",
@@ -294,6 +300,11 @@
 		],
 		[
 			"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/mainwindow.cpp",
 			"MU",
 			null
 		],

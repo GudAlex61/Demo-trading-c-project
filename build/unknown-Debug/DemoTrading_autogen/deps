@@ -9,6 +9,8 @@ DemoTrading_autogen/timestamp: \
 	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/login.cpp \
 	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/login.h \
 	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/main.cpp \
+	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/mainwindow.cpp \
+	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/mainwindow.h \
 	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.cpp \
 	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.h \
 	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/include/MakingAPosition.h \
@@ -554,5 +556,6 @@ DemoTrading_autogen/timestamp: \
 	/usr/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake \
 	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/authorization.ui \
 	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/login.ui \
+	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/mainwindow.ui \
 	/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.ui \
 	/usr/bin/cmake

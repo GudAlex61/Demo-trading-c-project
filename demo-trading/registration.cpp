@@ -31,11 +31,12 @@ void Registration::on_regButton_clicked()
     }
 
     else if (Users.registerUser(login.toStdString(), password.toStdString(), balance, UserId)) {
-        QMessageBox::information(this, "", "Вы успешно зарегестрированы!");
+        hide();
+        MainWindow *mainWindow = new MainWindow(UserId, balance);
+        mainWindow->show();
     }
 
     else {
         QMessageBox::critical(this, "", "Произошла ошибка. Логин уже используется.");
     }
 }
-

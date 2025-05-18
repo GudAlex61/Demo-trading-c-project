@@ -22,11 +22,13 @@ void login::on_pushButton_clicked()
     QString password = ui->pass->text();
 
     AuthManager Users("UserDB");
-    int UserId;
+    int userId;
     double balance;
 
-    if (Users.loginUser(login.toStdString(), password.toStdString(), balance, UserId)){
-        QMessageBox::information(this, "", "Привет, хороший Алекс 61-го года рождения");
+    if (Users.loginUser(login.toStdString(), password.toStdString(), balance, userId)){
+        hide();
+        MainWindow *mainWindow = new MainWindow(userId, balance);
+        mainWindow->show();
     }
     else{
         QMessageBox::critical(this, "", "Ваш аккаунт заблокирован, предоставьте договор с мобильным оператором");

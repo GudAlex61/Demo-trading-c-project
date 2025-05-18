@@ -28,6 +28,7 @@ set(SOURCES
     demo-trading/login.cpp
     demo-trading/authorization.cpp
     demo-trading/registration.cpp
+    demo-trading/mainwindow.cpp
 )
 
 # Добавляем заголовочные файлы
@@ -38,6 +39,7 @@ set(HEADERS
     demo-trading/login.h
     demo-trading/authorization.h
     demo-trading/registration.h
+    demo-trading/mainwindow.h
 )
 
 # Добавляем UI-формы
@@ -45,7 +47,8 @@ set(FORMS
     demo-trading/login.ui
     demo-trading/authorization.ui
     demo-trading/registration.ui
-)
+    demo-trading/mainwindow.ui
+    )
 
 # Создаем исполняемый файл
 add_executable(DemoTrading

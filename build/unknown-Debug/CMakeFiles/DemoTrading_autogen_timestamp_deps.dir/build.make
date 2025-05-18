@@ -68,9 +68,9 @@ include CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/progress.make
 
 CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
-CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libsqlite3.so
 CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
 CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
+CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libsqlite3.so
 
 DemoTrading_autogen_timestamp_deps: CMakeFiles/DemoTrading_autogen_timestamp_deps
 DemoTrading_autogen_timestamp_deps: CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/build.make

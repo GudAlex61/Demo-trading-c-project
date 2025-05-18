@@ -29,6 +29,7 @@ void login::on_pushButton_clicked()
         hide();
         MainWindow *mainWindow = new MainWindow(userId, balance);
         mainWindow->show();
+        
     }
     else{
         QMessageBox::critical(this, "", "Ваш аккаунт заблокирован, предоставьте договор с мобильным оператором");

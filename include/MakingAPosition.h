@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
-class Positon
+class Position
 {
 private:
     std::string tokenName;
@@ -11,20 +11,20 @@ private:
     time_t start;
     bool isLong;
 public:
-    Positon(std::string tokenName, int shoulder, double margin, bool isLong, time_t start, double entryPrice);
-    Positon();
-    ~Positon();
+    Position(std::string tokenName, int shoulder, double margin, bool isLong, time_t start, double entryPrice);
+    Position();
+    ~Position();
     std::string getTokenName();
     int getShoulder();
     double getMargin();
     double getEntryPrice();
     time_t getStart();
     bool getIsLong();
-    friend std::ostream& operator<<(std::ostream& os,  const Positon& position);
+    friend std::ostream& operator<<(std::ostream& os,  const Position& position);
 
 };
 
-Positon MakingPosition();
+Position MakingPosition(std::string tokenName, bool isLong, int shoulder, double margin);
 
 std::string chooseToken();
 int chooseShoulder();

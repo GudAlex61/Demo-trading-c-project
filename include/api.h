@@ -2,5 +2,5 @@
 #include "MakingAPosition.h"
 
 double getCryptoPrice(const std::string& cryptoId);
-bool checkLiquidation(Positon& position);
-double estimateLiquidation(Positon& position);
+bool checkLiquidation(Position& position);
+double estimateLiquidation(Position& position);

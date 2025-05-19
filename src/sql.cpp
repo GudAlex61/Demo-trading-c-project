@@ -46,7 +46,7 @@ AuthManager::~AuthManager() {
     sqlite3_close(db);
 }
 
-void AuthManager::getTrades(int& UserID, std::vector<Positon>& positions){
+void AuthManager::getTrades(int& UserID, std::vector<Position>& positions){
     try {
         sqlite3_stmt* stmt;
         const char* sql = "SELECT tokenName, shoulder, margin, isLong, start, entryPrice FROM trades WHERE user_id = ?;";
@@ -93,7 +93,7 @@ void AuthManager::saveBalance(int& UserID, double& balance) {
     sqlite3_finalize(stmt);
 }
 
-void AuthManager::saveTrades(int& UserID, std::vector<Positon>& positions){
+void AuthManager::saveTrades(int& UserID, std::vector<Position>& positions){
     try {
         sqlite3_exec(db, "BEGIN TRANSACTION", nullptr, nullptr, nullptr);
 
@@ -111,7 +111,7 @@ void AuthManager::saveTrades(int& UserID, std::vector<Positon>& positions){
         }
 
         for (int i = 0; i < positions.size(); i++){
-            Positon pos = positions[i];
+            Position pos = positions[i];
 
             sqlite3_stmt* stmt;
             const char* sql = "INSERT INTO trades (user_id, tokenName, shoulder, margin, isLong, start, entryPrice) VALUES (?, ?, ?, ?, ?, ?, ?);";

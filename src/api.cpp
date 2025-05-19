@@ -73,7 +73,7 @@ double getCryptoPrice(const std::string& cryptoId) {
     return price;
 }
 
-double estimateLiquidation(Positon& position){
+double estimateLiquidation(Position& position){
     if (position.getIsLong()){
         if (position.getShoulder() == 1){
             return 0;
@@ -84,7 +84,7 @@ double estimateLiquidation(Positon& position){
     }
 }
 
-bool checkLiquidation(Positon& position){
+bool checkLiquidation(Position& position){
     auto now = std::chrono::system_clock::now();
     time_t end = std::chrono::system_clock::to_time_t(now);
 

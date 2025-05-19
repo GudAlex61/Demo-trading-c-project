@@ -62,27 +62,27 @@
       <widget class="QComboBox" name="comboBox">
        <item>
         <property name="text">
-         <string>Bitcoin (BTC)</string>
+         <string>BTC</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Ethereum (ETH)</string>
+         <string>ETH</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Solana (SOL)</string>
+         <string>SOL</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Ripple (XRP)</string>
+         <string>XRP</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Pepecoin (PEPE)</string>
+         <string>PEPE</string>
         </property>
        </item>
       </widget>
@@ -97,9 +97,12 @@
         </widget>
        </item>
        <item>
-        <widget class="QSlider" name="horizontalSlider">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+        <widget class="QSpinBox" name="spinBox">
+        <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
          </property>
         </widget>
        </item>
@@ -115,7 +118,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="sumEdit"/>
+        <widget class="QLineEdit" name="sumEdit">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -135,7 +142,7 @@
      <x>0</x>
      <y>0</y>
      <width>691</width>
-     <height>19</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <vector>
+#include "MakingAPosition.h"
 
 namespace Ui {
 class MainWindow;
@@ -16,12 +18,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_addTradeButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     double balance;
     int userId;
+    std::vector<Position> positions;
 };
 
 #endif // MAINWINDOW_H

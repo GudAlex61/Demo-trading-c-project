@@ -14,9 +14,9 @@ public:
     AuthManager(const char* db_name);
     ~AuthManager();
 
-    void getTrades(int& UserID, std::vector<Positon>& positions);
+    void getTrades(int& UserID, std::vector<Position>& positions);
     void saveBalance(int& UserID, double& balance);
-    void saveTrades(int& UserID, std::vector<Positon>& positions);
+    void saveTrades(int& UserID, std::vector<Position>& positions);
     int registerUser(std::string email, std::string password, double& balance, int& UserID);
     int loginUser(std::string email, std::string password, double& balance, int& UserID);
 };

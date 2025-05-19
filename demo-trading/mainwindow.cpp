@@ -22,3 +22,5 @@ void MainWindow::on_pushButton_clicked()
     ui->statusbar->showMessage(QString("Баланс: %1").arg(balance));
 }
 
+
+

@@ -30,7 +30,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QRadioButton" name="radioButton">
+        <widget class="QRadioButton" name="longRadio">
          <property name="text">
           <string>Long</string>
          </property>
@@ -50,7 +50,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_2">
+        <widget class="QRadioButton" name="shortRadio">
          <property name="text">
           <string>Short</string>
          </property>
@@ -115,14 +115,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="sumEdit"/>
        </item>
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="addTradeButton">
        <property name="text">
-        <string>Изменить баланс</string>
+        <string>Создать трейд</string>
        </property>
       </widget>
      </item>

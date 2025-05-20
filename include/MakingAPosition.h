@@ -20,6 +20,7 @@ public:
     double getEntryPrice();
     time_t getStart();
     bool getIsLong();
+    double calculatePnL(Position& position);
     friend std::ostream& operator<<(std::ostream& os,  const Position& position);
 
 };

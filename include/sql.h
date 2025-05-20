@@ -21,4 +21,5 @@ public:
     int loginUser(std::string email, std::string password, double& balance, int& UserID);
 };
 
+
 #endif // SQL_H

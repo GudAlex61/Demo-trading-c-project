@@ -38,25 +38,25 @@ double getCryptoPrice(const std::string& cryptoId) {
         curl_easy_setopt(curl, CURLOPT_TIMEOUT, 5L); // Таймаут 5 секунд
 
         res = curl_easy_perform(curl);
-        
+
         if (res != CURLE_OK) {
             std::cerr << "CURL error: " << curl_easy_strerror(res) << std::endl;
         } else {
             long http_code = 0;
             curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &http_code);
-            
+
             if (http_code != 200) {
                 std::cerr << "HTTP Error: " << http_code << std::endl;
                 std::cerr << "Response: " << readBuffer << std::endl;
             } else {
                 try {
                     json data = json::parse(readBuffer);
-                    
+
                     // Проверяем структуру ответа
-                    if (data.is_object() && 
-                        data.contains("symbol") && 
-                        data.contains("price") && 
-                        data["price"].is_string()) 
+                    if (data.is_object() &&
+                        data.contains("symbol") &&
+                        data.contains("price") &&
+                        data["price"].is_string())
                     {
                         price = std::stod(data["price"].get<std::string>());
                     } else {

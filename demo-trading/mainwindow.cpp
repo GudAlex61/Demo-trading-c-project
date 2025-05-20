@@ -39,10 +39,10 @@ void MainWindow::on_addTradeButton_clicked()
 
     int leverage = ui->spinBox->value();
 
-    double amount = ui->sumEdit->text().replace(",", ".").toDouble();
+    double amount = ui->amountSpinBox->value();
 
     if (amount > balance){
-        return;
+        QMessageBox::critical(this, "", "У вас недостаточно средств!");
     }
     else {
         positions.push_back(MakingPosition(cryptoID.toStdString(), isLong, leverage, amount));
@@ -57,5 +57,37 @@ void MainWindow::on_addTradeButton_clicked()
     }
 }
 
+void MainWindow::on_uploadButton_clicked()
+{
+    for (int i = 0; i < positions.size(); i++){
+                Position position = positions[i];
+                if (checkLiquidation(position)){
+                    QMessageBox::critical(this, "Ликвидирована позиция", "");
+                    positions.erase(positions.begin()+i);
+                }
+    }
+    model = new QStandardItemModel(positions.size(), 3, this);
 
+    for (int i = 0; i < positions.size(); i++){
+        Position position = positions[i];
+        QString name = QString::fromStdString(position.getTokenName());
+        QString leverage = QString::number(position.getShoulder());
+        QString price = QString::number(position.getEntryPrice());
+        QString myMargin = QString::number(position.getMargin());
+        QString pnl = QString::number(position.calculatePnL(position));
+        QString los;
+        if (position.getIsLong()) {
+            los = "LONG";
+        }
+        else {
+            los = "SHORT";
+        }
 
+        model->setItem(i, 0, new QStandardItem(los + " " + name + "\n х" + leverage + " плечо"));
+        model->setItem(i, 1, new QStandardItem("$" + price + "\n$" + myMargin));
+        model->setItem(i, 2, new QStandardItem("$" + pnl));
+    }
+
+    ui->tradesView->setModel(model);
+    ui->tradesView->resizeColumnsToContents();
+}

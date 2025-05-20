@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <vector>
 #include "MakingAPosition.h"
+#include <QStandardItemModel>
 
 namespace Ui {
 class MainWindow;
@@ -20,11 +21,14 @@ public:
 private slots:
     void on_addTradeButton_clicked();
 
+    void on_uploadButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     double balance;
     int userId;
     std::vector<Position> positions;
+    QStandardItemModel *model;
 };
 
 #endif // MAINWINDOW_H

@@ -42,6 +42,9 @@
           <property name="text">
            <string/>
           </property>
+          <property name="maxLength">
+           <number>12</number>
+          </property>
          </widget>
         </item>
        </layout>
@@ -56,7 +59,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="pass"/>
+         <widget class="QLineEdit" name="pass">
+          <property name="maxLength">
+           <number>12</number>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

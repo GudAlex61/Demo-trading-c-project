@@ -32,9 +32,9 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QVBoxLayout *verticalLayout_2;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit_3;
+    QLineEdit *loginLine;
+    QLineEdit *passLine;
+    QLineEdit *secpassLine;
     QPushButton *regButton;
 
     void setupUi(QDialog *Registration)
@@ -71,20 +71,23 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName("verticalLayout_2");
-        lineEdit = new QLineEdit(regBox);
-        lineEdit->setObjectName("lineEdit");
+        loginLine = new QLineEdit(regBox);
+        loginLine->setObjectName("loginLine");
+        loginLine->setMaxLength(12);
 
-        verticalLayout_2->addWidget(lineEdit);
+        verticalLayout_2->addWidget(loginLine);
 
-        lineEdit_2 = new QLineEdit(regBox);
-        lineEdit_2->setObjectName("lineEdit_2");
+        passLine = new QLineEdit(regBox);
+        passLine->setObjectName("passLine");
+        passLine->setMaxLength(12);
 
-        verticalLayout_2->addWidget(lineEdit_2);
+        verticalLayout_2->addWidget(passLine);
 
-        lineEdit_3 = new QLineEdit(regBox);
-        lineEdit_3->setObjectName("lineEdit_3");
+        secpassLine = new QLineEdit(regBox);
+        secpassLine->setObjectName("secpassLine");
+        secpassLine->setMaxLength(12);
 
-        verticalLayout_2->addWidget(lineEdit_3);
+        verticalLayout_2->addWidget(secpassLine);
 
 
         horizontalLayout->addLayout(verticalLayout_2);
@@ -107,7 +110,7 @@ public:
     {
         Registration->setWindowTitle(QCoreApplication::translate("Registration", "Demo-Project", nullptr));
         regBox->setTitle(QCoreApplication::translate("Registration", "\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
-        label->setText(QCoreApplication::translate("Registration", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\277\320\276\321\207\321\202\321\203", nullptr));
+        label->setText(QCoreApplication::translate("Registration", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\273\320\276\320\263\320\270\320\275", nullptr));
         label_2->setText(QCoreApplication::translate("Registration", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\277\320\260\321\200\320\276\320\273\321\214", nullptr));
         label_3->setText(QCoreApplication::translate("Registration", "\320\237\320\276\320\262\321\202\320\276\321\200\320\270\321\202\320\265 \320\277\320\260\321\200\320\276\320\273\321\214", nullptr));
         regButton->setText(QCoreApplication::translate("Registration", "\320\227\320\260\321\200\320\265\320\263\320\270\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214\321\201\321\217", nullptr));

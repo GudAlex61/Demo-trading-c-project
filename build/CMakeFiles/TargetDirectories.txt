@@ -1,5 +1,5 @@
-/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/DemoTrading.dir
-/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/edit_cache.dir
-/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/rebuild_cache.dir
-/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen_timestamp_deps.dir
-/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen.dir
+/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/DemoTrading.dir
+/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/edit_cache.dir
+/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/rebuild_cache.dir
+/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen_timestamp_deps.dir
+/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen.dir

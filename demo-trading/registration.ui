@@ -56,13 +56,25 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QLineEdit" name="loginLine"/>
+         <widget class="QLineEdit" name="loginLine">
+          <property name="maxLength">
+           <number>12</number>
+          </property>
+         </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="passLine"/>
+         <widget class="QLineEdit" name="passLine">
+          <property name="maxLength">
+           <number>12</number>
+          </property>
+         </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="secpassLine"/>
+         <widget class="QLineEdit" name="secpassLine">
+          <property name="maxLength">
+           <number>12</number>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

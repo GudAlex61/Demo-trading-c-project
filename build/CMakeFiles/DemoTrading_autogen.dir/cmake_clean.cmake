@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/DemoTrading_autogen"
   "DemoTrading_autogen/include/demo-trading/ui_authorization.h"
   "DemoTrading_autogen/include/demo-trading/ui_login.h"
+  "DemoTrading_autogen/include/demo-trading/ui_mainwindow.h"
   "DemoTrading_autogen/include/demo-trading/ui_registration.h"
   "DemoTrading_autogen/mocs_compilation.cpp"
   "DemoTrading_autogen/timestamp"

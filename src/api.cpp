@@ -7,11 +7,9 @@
 
 using json = nlohmann::json;
 
-int WriteCallback(char* contents, int size, int nmemb, std::string* output) {
-    int total_size = size * nmemb;
-    if (output && contents) {
-        output->append(contents, total_size);
-    }
+static size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* buffer) {
+    size_t total_size = size * nmemb;
+    buffer->append((char*)contents, total_size);
     return total_size;
 }
 
@@ -73,79 +71,101 @@ double getCryptoPrice(const std::string& cryptoId) {
     return price;
 }
 
-double estimateLiquidation(Position& position){
-    if (position.getIsLong()){
-        if (position.getShoulder() == 1){
-            return 0;
-        }
-        return position.getEntryPrice() * (100 - (100 / position.getShoulder())) / 100;
-    } else{
-        return position.getEntryPrice() * (100 + (100 / position.getShoulder())) / 100;
+double estimateLiquidation(Position& position) {
+    double leverage = static_cast<double>(position.getShoulder());
+    if (leverage < 1.0) {
+        std::cerr << "Некорректное значение плеча: " << leverage << std::endl;
+        return 0.0;
+    }
+    
+    if (position.getIsLong()) {
+        return position.getEntryPrice() * (1.0 - 1.0 / leverage);
+    } else {
+        return position.getEntryPrice() * (1.0 + 1.0 / leverage);
     }
 }
 
-bool checkLiquidation(Position& position){
-    auto now = std::chrono::system_clock::now();
-    time_t end = std::chrono::system_clock::to_time_t(now);
-
-    CURL* curl;
+bool checkLiquidation(Position& position) {
+    CURL* curl = curl_easy_init();
     std::string readBuffer;
+    bool result = false;
 
-    std::string symbol;
-    symbol = position.getTokenName()+"USDT";
-
-    char interval = 's';
-    if (end-position.getStart() > 960){
-        interval = 'm';
-    } else if (end-position.getStart() > 60000){
-        interval = 'h';
+    if (!curl) {
+        std::cerr << "Ошибка инициализации CURL" << std::endl;
+        return false;
     }
 
-    double extremum = position.getIsLong() ? 100000 : 0;
+    try {
+        // Формирование параметров запроса
+        auto now = std::chrono::system_clock::now();
+        time_t end = std::chrono::system_clock::to_time_t(now);
+        
+        std::string symbol = position.getTokenName() + "USDT";
+        std::string interval = "1m";
+        std::string url = "https://api.binance.com/api/v3/klines?symbol=" + symbol +
+                        "&interval=" + interval +
+                        "&startTime=" + std::to_string(static_cast<uint64_t>(position.getStart()) * 1000) +
+                        "&endTime=" + std::to_string(static_cast<uint64_t>(end) * 1000);
 
-    curl = curl_easy_init();
-    if (curl) {
-        std::string url = "https://www.binance.com/api/v3/klines?symbol=" + symbol + "&interval=1" + interval + "&limit=1000&startTime=" + std::to_string(position.getStart()*1000) + "&endTime=" + std::to_string(end*1000);
+        // Настройка CURL
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
-        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, 10L);
 
+        // Выполнение запроса
         CURLcode res = curl_easy_perform(curl);
         if (res != CURLE_OK) {
-            std::cerr << "Ошибка CURL: " << curl_easy_strerror(res) << std::endl;
-        } else {
+            throw std::runtime_error("CURL error: " + std::string(curl_easy_strerror(res)));
+        }
+
+        // Парсинг JSON
+        json data = json::parse(readBuffer);
+        
+        // Валидация структуры ответа
+        if (!data.is_array()) {
+            throw std::runtime_error("Invalid response format. Expected array.");
+        }
+
+        double extremum = position.getIsLong() 
+            ? std::numeric_limits<double>::max()
+            : std::numeric_limits<double>::lowest();
+
+        // Обработка свечей
+        for (const auto& candle : data) {
+            if (!candle.is_array() || candle.size() < 12) {
+                std::cerr << "Invalid candle format: " << candle.dump() << std::endl;
+                continue;
+            }
+
             try {
-                json data = json::parse(readBuffer);
-                for(const auto& candle : data) {
-                    if (position.getIsLong()){
-                        double candleMin = std::stod(candle[3].get<std::string>());
-                        if (candleMin < extremum){
-                            extremum = candleMin;
-                        }
-                    } else {
-                        double candleMax = std::stod(candle[2].get<std::string>());
-                        if (candleMax > extremum){
-                            extremum = candleMax;
-                        }
-                    }
+                if (position.getIsLong()) {
+                    double low = std::stod(candle[3].get<std::string>());
+                    extremum = std::min(extremum, low);
+                } else {
+                    double high = std::stod(candle[2].get<std::string>());
+                    extremum = std::max(extremum, high);
                 }
             } catch (const std::exception& e) {
-                std::cerr << "Ошибка парсинга JSON: " << e.what() << std::endl;
+                std::cerr << "Error processing candle: " << e.what() << std::endl;
             }
         }
-        curl_easy_cleanup(curl);
-    }
-    if (position.getIsLong()){
-        if (extremum < estimateLiquidation(position)){
-            return true;
-        }
-    } else{
-        if (extremum > estimateLiquidation(position)){
-            return true;
-        }
-    }
-    return false;
 
+        // Проверка ликвидации
+        double liquidationPrice = estimateLiquidation(position);
+        result = position.getIsLong() 
+            ? (extremum <= liquidationPrice)
+            : (extremum >= liquidationPrice);
+
+    } catch (const json::exception& e) {
+        std::cerr << "JSON error: " << e.what() << std::endl;
+        std::cerr << "Response data: " << readBuffer << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+
+    curl_easy_cleanup(curl);
+    return result;
 }
 
 int mainGreg() {

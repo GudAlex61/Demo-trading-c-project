@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o.d"
   "CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o"
   "CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o.d"
+  "CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o"
+  "CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o.d"
   "CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o"
   "CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o.d"
   "CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o"

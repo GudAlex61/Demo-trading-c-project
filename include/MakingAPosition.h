@@ -20,14 +20,10 @@ public:
     double getEntryPrice();
     time_t getStart();
     bool getIsLong();
-    double calculatePnL(Position& position);
+    double calculatePnL();
     friend std::ostream& operator<<(std::ostream& os,  const Position& position);
 
 };
 
 Position MakingPosition(std::string tokenName, bool isLong, int shoulder, double margin);
 
-std::string chooseToken();
-int chooseShoulder();
-double chooseMargin();
-bool chooseLong();

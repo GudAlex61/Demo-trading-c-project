@@ -56,6 +56,7 @@ public:
 
         log = new QLineEdit(groupBox);
         log->setObjectName("log");
+        log->setMaxLength(12);
 
         horizontalLayout->addWidget(log);
 
@@ -71,6 +72,7 @@ public:
 
         pass = new QLineEdit(groupBox);
         pass->setObjectName("pass");
+        pass->setMaxLength(12);
 
         horizontalLayout_2->addWidget(pass);
 

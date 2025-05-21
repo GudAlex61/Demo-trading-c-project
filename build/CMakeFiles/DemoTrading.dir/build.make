@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/greg_goozmer/i_love_dasha/Demo-trading-c-project
+CMAKE_SOURCE_DIR = /home/alexgud/project/Demo-trading-c-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build
+CMAKE_BINARY_DIR = /home/alexgud/project/Demo-trading-c-project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DemoTrading.dir/depend.make
@@ -72,121 +72,135 @@ include CMakeFiles/DemoTrading.dir/flags.make
 DemoTrading_autogen/timestamp: /usr/lib/qt6/libexec/moc
 DemoTrading_autogen/timestamp: /usr/lib/qt6/libexec/uic
 DemoTrading_autogen/timestamp: CMakeFiles/DemoTrading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target DemoTrading"
-	/usr/bin/cmake -E cmake_autogen /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen.dir/AutogenInfo.json Build
-	/usr/bin/cmake -E touch /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/DemoTrading_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target DemoTrading"
+	/usr/bin/cmake -E cmake_autogen /home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/alexgud/project/Demo-trading-c-project/build/DemoTrading_autogen/timestamp
 
 CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o: CMakeFiles/DemoTrading.dir/flags.make
 CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o: DemoTrading_autogen/mocs_compilation.cpp
 CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o: CMakeFiles/DemoTrading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o -MF CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o -c /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/DemoTrading_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o -MF CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.o -c /home/alexgud/project/Demo-trading-c-project/build/DemoTrading_autogen/mocs_compilation.cpp
 
 CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.i"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/DemoTrading_autogen/mocs_compilation.cpp > CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexgud/project/Demo-trading-c-project/build/DemoTrading_autogen/mocs_compilation.cpp > CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.s"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/DemoTrading_autogen/mocs_compilation.cpp -o CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexgud/project/Demo-trading-c-project/build/DemoTrading_autogen/mocs_compilation.cpp -o CMakeFiles/DemoTrading.dir/DemoTrading_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o: CMakeFiles/DemoTrading.dir/flags.make
-CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o: /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/main.cpp
+CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o: /home/alexgud/project/Demo-trading-c-project/demo-trading/main.cpp
 CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o: CMakeFiles/DemoTrading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o -MF CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o.d -o CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o -c /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o -MF CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o.d -o CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.o -c /home/alexgud/project/Demo-trading-c-project/demo-trading/main.cpp
 
 CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.i"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/main.cpp > CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexgud/project/Demo-trading-c-project/demo-trading/main.cpp > CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.i
 
 CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.s"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/main.cpp -o CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexgud/project/Demo-trading-c-project/demo-trading/main.cpp -o CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.s
 
 CMakeFiles/DemoTrading.dir/src/api.cpp.o: CMakeFiles/DemoTrading.dir/flags.make
-CMakeFiles/DemoTrading.dir/src/api.cpp.o: /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/api.cpp
+CMakeFiles/DemoTrading.dir/src/api.cpp.o: /home/alexgud/project/Demo-trading-c-project/src/api.cpp
 CMakeFiles/DemoTrading.dir/src/api.cpp.o: CMakeFiles/DemoTrading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DemoTrading.dir/src/api.cpp.o"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/src/api.cpp.o -MF CMakeFiles/DemoTrading.dir/src/api.cpp.o.d -o CMakeFiles/DemoTrading.dir/src/api.cpp.o -c /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/api.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DemoTrading.dir/src/api.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/src/api.cpp.o -MF CMakeFiles/DemoTrading.dir/src/api.cpp.o.d -o CMakeFiles/DemoTrading.dir/src/api.cpp.o -c /home/alexgud/project/Demo-trading-c-project/src/api.cpp
 
 CMakeFiles/DemoTrading.dir/src/api.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DemoTrading.dir/src/api.cpp.i"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/api.cpp > CMakeFiles/DemoTrading.dir/src/api.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexgud/project/Demo-trading-c-project/src/api.cpp > CMakeFiles/DemoTrading.dir/src/api.cpp.i
 
 CMakeFiles/DemoTrading.dir/src/api.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DemoTrading.dir/src/api.cpp.s"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/api.cpp -o CMakeFiles/DemoTrading.dir/src/api.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexgud/project/Demo-trading-c-project/src/api.cpp -o CMakeFiles/DemoTrading.dir/src/api.cpp.s
 
 CMakeFiles/DemoTrading.dir/src/sql.cpp.o: CMakeFiles/DemoTrading.dir/flags.make
-CMakeFiles/DemoTrading.dir/src/sql.cpp.o: /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/sql.cpp
+CMakeFiles/DemoTrading.dir/src/sql.cpp.o: /home/alexgud/project/Demo-trading-c-project/src/sql.cpp
 CMakeFiles/DemoTrading.dir/src/sql.cpp.o: CMakeFiles/DemoTrading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DemoTrading.dir/src/sql.cpp.o"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/src/sql.cpp.o -MF CMakeFiles/DemoTrading.dir/src/sql.cpp.o.d -o CMakeFiles/DemoTrading.dir/src/sql.cpp.o -c /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/sql.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DemoTrading.dir/src/sql.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/src/sql.cpp.o -MF CMakeFiles/DemoTrading.dir/src/sql.cpp.o.d -o CMakeFiles/DemoTrading.dir/src/sql.cpp.o -c /home/alexgud/project/Demo-trading-c-project/src/sql.cpp
 
 CMakeFiles/DemoTrading.dir/src/sql.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DemoTrading.dir/src/sql.cpp.i"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/sql.cpp > CMakeFiles/DemoTrading.dir/src/sql.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexgud/project/Demo-trading-c-project/src/sql.cpp > CMakeFiles/DemoTrading.dir/src/sql.cpp.i
 
 CMakeFiles/DemoTrading.dir/src/sql.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DemoTrading.dir/src/sql.cpp.s"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/sql.cpp -o CMakeFiles/DemoTrading.dir/src/sql.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexgud/project/Demo-trading-c-project/src/sql.cpp -o CMakeFiles/DemoTrading.dir/src/sql.cpp.s
 
 CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o: CMakeFiles/DemoTrading.dir/flags.make
-CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o: /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/MakingAPosition.cpp
+CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o: /home/alexgud/project/Demo-trading-c-project/src/MakingAPosition.cpp
 CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o: CMakeFiles/DemoTrading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o -MF CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o.d -o CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o -c /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/MakingAPosition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o -MF CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o.d -o CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o -c /home/alexgud/project/Demo-trading-c-project/src/MakingAPosition.cpp
 
 CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.i"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/MakingAPosition.cpp > CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexgud/project/Demo-trading-c-project/src/MakingAPosition.cpp > CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.i
 
 CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.s"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/src/MakingAPosition.cpp -o CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexgud/project/Demo-trading-c-project/src/MakingAPosition.cpp -o CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.s
 
 CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o: CMakeFiles/DemoTrading.dir/flags.make
-CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o: /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/login.cpp
+CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o: /home/alexgud/project/Demo-trading-c-project/demo-trading/login.cpp
 CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o: CMakeFiles/DemoTrading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o -MF CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o.d -o CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o -c /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/login.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o -MF CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o.d -o CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o -c /home/alexgud/project/Demo-trading-c-project/demo-trading/login.cpp
 
 CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.i"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/login.cpp > CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexgud/project/Demo-trading-c-project/demo-trading/login.cpp > CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.i
 
 CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.s"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/login.cpp -o CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexgud/project/Demo-trading-c-project/demo-trading/login.cpp -o CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.s
 
 CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o: CMakeFiles/DemoTrading.dir/flags.make
-CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o: /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/authorization.cpp
+CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o: /home/alexgud/project/Demo-trading-c-project/demo-trading/authorization.cpp
 CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o: CMakeFiles/DemoTrading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o -MF CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o.d -o CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o -c /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/authorization.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o -MF CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o.d -o CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o -c /home/alexgud/project/Demo-trading-c-project/demo-trading/authorization.cpp
 
 CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.i"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/authorization.cpp > CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexgud/project/Demo-trading-c-project/demo-trading/authorization.cpp > CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.i
 
 CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.s"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/authorization.cpp -o CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexgud/project/Demo-trading-c-project/demo-trading/authorization.cpp -o CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.s
 
 CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o: CMakeFiles/DemoTrading.dir/flags.make
-CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o: /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.cpp
+CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o: /home/alexgud/project/Demo-trading-c-project/demo-trading/registration.cpp
 CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o: CMakeFiles/DemoTrading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o -MF CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o.d -o CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o -c /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o -MF CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o.d -o CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o -c /home/alexgud/project/Demo-trading-c-project/demo-trading/registration.cpp
 
 CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.i"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.cpp > CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexgud/project/Demo-trading-c-project/demo-trading/registration.cpp > CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.i
 
 CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.s"
-	/usr/bin/x86_64-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/demo-trading/registration.cpp -o CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexgud/project/Demo-trading-c-project/demo-trading/registration.cpp -o CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.s
+
+CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o: CMakeFiles/DemoTrading.dir/flags.make
+CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o: /home/alexgud/project/Demo-trading-c-project/demo-trading/mainwindow.cpp
+CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o: CMakeFiles/DemoTrading.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o -MF CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o.d -o CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o -c /home/alexgud/project/Demo-trading-c-project/demo-trading/mainwindow.cpp
+
+CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexgud/project/Demo-trading-c-project/demo-trading/mainwindow.cpp > CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.i
+
+CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexgud/project/Demo-trading-c-project/demo-trading/mainwindow.cpp -o CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.s
 
 # Object files for target DemoTrading
 DemoTrading_OBJECTS = \
@@ -197,7 +211,8 @@ DemoTrading_OBJECTS = \
 "CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o" \
 "CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o" \
 "CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o" \
-"CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o"
+"CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o" \
+"CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o"
 
 # External object files for target DemoTrading
 DemoTrading_EXTERNAL_OBJECTS =
@@ -210,16 +225,27 @@ DemoTrading: CMakeFiles/DemoTrading.dir/src/MakingAPosition.cpp.o
 DemoTrading: CMakeFiles/DemoTrading.dir/demo-trading/login.cpp.o
 DemoTrading: CMakeFiles/DemoTrading.dir/demo-trading/authorization.cpp.o
 DemoTrading: CMakeFiles/DemoTrading.dir/demo-trading/registration.cpp.o
+DemoTrading: CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o
 DemoTrading: CMakeFiles/DemoTrading.dir/build.make
-DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6WebEngineWidgets.so.6.4.2
 DemoTrading: /usr/lib/x86_64-linux-gnu/libcurl.so
 DemoTrading: /usr/lib/x86_64-linux-gnu/libsqlite3.so
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6WebEngineCore.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6WebChannel.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6Positioning.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6PrintSupport.so.6.4.2
+DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
 DemoTrading: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 DemoTrading: /usr/lib/x86_64-linux-gnu/libGLX.so
 DemoTrading: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 DemoTrading: CMakeFiles/DemoTrading.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable DemoTrading"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable DemoTrading"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DemoTrading.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -231,6 +257,6 @@ CMakeFiles/DemoTrading.dir/clean:
 .PHONY : CMakeFiles/DemoTrading.dir/clean
 
 CMakeFiles/DemoTrading.dir/depend: DemoTrading_autogen/timestamp
-	cd /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/greg_goozmer/i_love_dasha/Demo-trading-c-project /home/greg_goozmer/i_love_dasha/Demo-trading-c-project /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/DemoTrading.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/alexgud/project/Demo-trading-c-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alexgud/project/Demo-trading-c-project /home/alexgud/project/Demo-trading-c-project /home/alexgud/project/Demo-trading-c-project/build /home/alexgud/project/Demo-trading-c-project/build /home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/DemoTrading.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/DemoTrading.dir/depend
 

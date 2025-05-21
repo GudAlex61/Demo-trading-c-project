@@ -8,7 +8,11 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 # Поиск необходимых пакетов
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 REQUIRED COMPONENTS 
+    Core 
+    Widgets 
+    WebEngineWidgets  # Добавляем WebEngine
+)
 find_package(CURL REQUIRED)
 find_package(SQLite3 REQUIRED)
 
@@ -61,6 +65,7 @@ add_executable(DemoTrading
 target_link_libraries(DemoTrading PRIVATE
     Qt6::Core
     Qt6::Widgets
+    Qt6::WebEngineWidgets
     ${CURL_LIBRARIES}
     SQLite::SQLite3
 )

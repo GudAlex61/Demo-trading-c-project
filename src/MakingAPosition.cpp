@@ -17,21 +17,21 @@ Position MakingPosition(std::string tokenName, bool isLong, int shoulder, double
     return newPosition;
 }
 
-double Position::calculatePnL(Position& position){
-     double currentPrice = getCryptoPrice(position.getTokenName());
+double Position::calculatePnL(){
+     double currentPrice = getCryptoPrice(tokenName);
     if (currentPrice <= 0) {
-        std::cerr << "Ошибка: не удалось получить цену для " << position.getTokenName() << std::endl;
+        std::cerr << "Ошибка: не удалось получить цену для " << tokenName << std::endl;
         return 0.0;
     }
     double priceChange;
 
-    if (position.getIsLong()) {
-        priceChange = (currentPrice / position.getEntryPrice() - 1.0);
+    if (isLong) {
+        priceChange = (currentPrice / entryPrice - 1.0);
     } else {
-        priceChange = (1.0 - currentPrice / position.getEntryPrice());
+        priceChange = (1.0 - currentPrice / entryPrice);
     }
     
-    return position.getMargin() * priceChange * position.getShoulder();
+    return margin * priceChange * shoulder;
 }
 
 Position::Position(std::string tokenName, int shoulder, double margin, bool isLong, time_t start, double entryPrice){

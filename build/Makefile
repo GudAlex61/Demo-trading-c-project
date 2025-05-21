@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/greg_goozmer/i_love_dasha/Demo-trading-c-project
+CMAKE_SOURCE_DIR = /home/alexgud/project/Demo-trading-c-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build
+CMAKE_BINARY_DIR = /home/alexgud/project/Demo-trading-c-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexgud/project/Demo-trading-c-project/build/CMakeFiles /home/alexgud/project/Demo-trading-c-project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexgud/project/Demo-trading-c-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -251,6 +251,30 @@ demo-trading/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/main.cpp.s
 .PHONY : demo-trading/main.cpp.s
 
+demo-trading/mainwindow.o: demo-trading/mainwindow.cpp.o
+.PHONY : demo-trading/mainwindow.o
+
+# target to build an object file
+demo-trading/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.o
+.PHONY : demo-trading/mainwindow.cpp.o
+
+demo-trading/mainwindow.i: demo-trading/mainwindow.cpp.i
+.PHONY : demo-trading/mainwindow.i
+
+# target to preprocess a source file
+demo-trading/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.i
+.PHONY : demo-trading/mainwindow.cpp.i
+
+demo-trading/mainwindow.s: demo-trading/mainwindow.cpp.s
+.PHONY : demo-trading/mainwindow.s
+
+# target to generate assembly for a file
+demo-trading/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DemoTrading.dir/build.make CMakeFiles/DemoTrading.dir/demo-trading/mainwindow.cpp.s
+.PHONY : demo-trading/mainwindow.cpp.s
+
 demo-trading/registration.o: demo-trading/registration.cpp.o
 .PHONY : demo-trading/registration.o
 
@@ -370,6 +394,9 @@ help:
 	@echo "... demo-trading/main.o"
 	@echo "... demo-trading/main.i"
 	@echo "... demo-trading/main.s"
+	@echo "... demo-trading/mainwindow.o"
+	@echo "... demo-trading/mainwindow.i"
+	@echo "... demo-trading/mainwindow.s"
 	@echo "... demo-trading/registration.o"
 	@echo "... demo-trading/registration.i"
 	@echo "... demo-trading/registration.s"

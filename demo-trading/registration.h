@@ -19,6 +19,8 @@ public:
 private slots:
     void on_regButton_clicked();
 
+    void on_backButton_clicked();
+
 private:
     Ui::Registration *ui;
 };

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexgud/project/Demo-trading-c-project
+CMAKE_SOURCE_DIR = /home/greg_goozmer/i_love_dasha/Demo-trading-c-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexgud/project/Demo-trading-c-project/build
+CMAKE_BINARY_DIR = /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build
 
 # Utility rule file for DemoTrading_autogen.
 
@@ -71,9 +71,9 @@ CMakeFiles/DemoTrading_autogen: DemoTrading_autogen/timestamp
 DemoTrading_autogen/timestamp: /usr/lib/qt6/libexec/moc
 DemoTrading_autogen/timestamp: /usr/lib/qt6/libexec/uic
 DemoTrading_autogen/timestamp: CMakeFiles/DemoTrading_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alexgud/project/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target DemoTrading"
-	/usr/bin/cmake -E cmake_autogen /home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/alexgud/project/Demo-trading-c-project/build/DemoTrading_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target DemoTrading"
+	/usr/bin/cmake -E cmake_autogen /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/DemoTrading_autogen/timestamp
 
 DemoTrading_autogen: CMakeFiles/DemoTrading_autogen
 DemoTrading_autogen: DemoTrading_autogen/timestamp
@@ -89,6 +89,6 @@ CMakeFiles/DemoTrading_autogen.dir/clean:
 .PHONY : CMakeFiles/DemoTrading_autogen.dir/clean
 
 CMakeFiles/DemoTrading_autogen.dir/depend:
-	cd /home/alexgud/project/Demo-trading-c-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alexgud/project/Demo-trading-c-project /home/alexgud/project/Demo-trading-c-project /home/alexgud/project/Demo-trading-c-project/build /home/alexgud/project/Demo-trading-c-project/build /home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/greg_goozmer/i_love_dasha/Demo-trading-c-project /home/greg_goozmer/i_love_dasha/Demo-trading-c-project /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/DemoTrading_autogen.dir/depend
 

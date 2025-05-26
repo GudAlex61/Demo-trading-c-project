@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+2c6657456a6e55a4211f1cc92b7fa7e9 CMakeFiles/DemoTrading_autogen
+2c6657456a6e55a4211f1cc92b7fa7e9 CMakeFiles/DemoTrading_autogen_timestamp_deps
+338f621c53d07252b1f028358247f28c DemoTrading_autogen/timestamp

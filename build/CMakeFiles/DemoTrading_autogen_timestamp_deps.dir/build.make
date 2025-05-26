@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexgud/project/Demo-trading-c-project
+CMAKE_SOURCE_DIR = /home/greg_goozmer/i_love_dasha/Demo-trading-c-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexgud/project/Demo-trading-c-project/build
+CMAKE_BINARY_DIR = /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build
 
 # Utility rule file for DemoTrading_autogen_timestamp_deps.
 
@@ -66,12 +66,12 @@ include CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
-CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
-CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
-CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
-CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6WebEngineWidgets.so.6.4.2
 CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libsqlite3.so
+CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
+CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
+CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
+CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
+CMakeFiles/DemoTrading_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6WebEngineWidgets.so.6.4.2
 
 DemoTrading_autogen_timestamp_deps: CMakeFiles/DemoTrading_autogen_timestamp_deps
 DemoTrading_autogen_timestamp_deps: CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/build.make
@@ -86,6 +86,6 @@ CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/depend:
-	cd /home/alexgud/project/Demo-trading-c-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alexgud/project/Demo-trading-c-project /home/alexgud/project/Demo-trading-c-project /home/alexgud/project/Demo-trading-c-project/build /home/alexgud/project/Demo-trading-c-project/build /home/alexgud/project/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/greg_goozmer/i_love_dasha/Demo-trading-c-project /home/greg_goozmer/i_love_dasha/Demo-trading-c-project /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build /home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/DemoTrading_autogen_timestamp_deps.dir/depend
 

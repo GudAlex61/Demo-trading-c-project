@@ -3,6 +3,7 @@
 #include <QMessageBox>
 #include "sql.h"
 #include "sqlite3.h"
+#include "authorization.h"
 
 Registration::Registration(QWidget *parent)
     : QDialog(parent)
@@ -40,3 +41,13 @@ void Registration::on_regButton_clicked()
         QMessageBox::critical(this, "", "Произошла ошибка. Логин уже используется.");
     }
 }
+
+
+
+void Registration::on_backButton_clicked()
+{
+    hide();
+    Authorization *authWindow = new Authorization();
+    authWindow->show();
+}
+

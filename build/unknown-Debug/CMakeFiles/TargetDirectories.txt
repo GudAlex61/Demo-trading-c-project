@@ -1,0 +1,5 @@
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/unknown-Debug/CMakeFiles/DemoTrading.dir
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/unknown-Debug/CMakeFiles/edit_cache.dir
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/unknown-Debug/CMakeFiles/rebuild_cache.dir
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/unknown-Debug/CMakeFiles/DemoTrading_autogen_timestamp_deps.dir
+/home/greg_goozmer/i_love_dasha/Demo-trading-c-project/build/unknown-Debug/CMakeFiles/DemoTrading_autogen.dir

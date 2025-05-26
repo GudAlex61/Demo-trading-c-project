@@ -13,23 +13,19 @@ MainWindow::MainWindow(int userId, double balance, QWidget *parent)
 {
     ui->setupUi(this);
     
-    // Настройка таблицы
     ui->tradesView->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->tradesView->horizontalHeader()->setVisible(false);
     ui->tradesView->verticalHeader()->setVisible(false);
 
     connect(ui->tradesView, &QTableView::clicked, this, &MainWindow::onTradeClicked);
 
-    // Веб-вью
     webView = new QWebEngineView(this);
     webView->setGeometry(30, 390, 740, 240);
 
-    // Подключение сигналов
     connect(ui->comboBox, &QComboBox::currentTextChanged, 
             this, &MainWindow::onCryptoSelected);
     onCryptoSelected(ui->comboBox->currentText());
 
-    // Стилизация кнопок
     auto activateButton = [this]() {
         ui->addTradeButton->setEnabled(
             ui->longRadio->isChecked() || ui->shortRadio->isChecked()
@@ -51,7 +47,6 @@ MainWindow::MainWindow(int userId, double balance, QWidget *parent)
         );
     });
 
-    // Загрузка данных
     AuthManager Users("UserDB");
     ui->statusbar->showMessage(QString("Баланс: %1").arg(balance));
     Users.getTrades(userId, positions);

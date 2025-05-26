@@ -3,6 +3,7 @@
 #include <QMessageBox>
 #include "sql.h"
 #include "sqlite3.h"
+#include "authorization.h"
 
 login::login(QWidget *parent)
     : QDialog(parent)
@@ -29,9 +30,18 @@ void login::on_pushButton_clicked()
         hide();
         MainWindow *mainWindow = new MainWindow(userId, balance);
         mainWindow->show();
-        
+
     }
     else{
-        QMessageBox::critical(this, "", "Ваш аккаунт заблокирован, предоставьте договор с мобильным оператором");
+        QMessageBox::critical(this, "", "Логин или пароль введены неверно :(");
     }
 }
+
+void login::on_backButton_clicked()
+{
+    if (parentWindow) {
+        parentWindow->show();
+        this->close();
+    }
+}
+

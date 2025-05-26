@@ -39,9 +39,8 @@ void login::on_pushButton_clicked()
 
 void login::on_backButton_clicked()
 {
-    if (parentWindow) {
-        parentWindow->show();
-        this->close();
-    }
+    Authorization *authWindow = new Authorization();
+    this->close();
+    authWindow->show();
 }
 

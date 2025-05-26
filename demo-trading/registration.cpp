@@ -46,7 +46,7 @@ void Registration::on_regButton_clicked()
 
 void Registration::on_backButton_clicked()
 {
-    hide();
+    this->close();
     Authorization *authWindow = new Authorization();
     authWindow->show();
 }

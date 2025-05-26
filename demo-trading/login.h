@@ -23,7 +23,6 @@ private slots:
 
 private:
     Ui::login *ui;
-    QWidget *parentWindow;
 };
 
 #endif // LOGIN_H

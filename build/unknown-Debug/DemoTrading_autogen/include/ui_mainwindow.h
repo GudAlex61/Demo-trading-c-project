@@ -235,7 +235,7 @@ public:
         webView->setGeometry(QRect(30, 390, 740, 240));
         uploadButton = new QPushButton(centralwidget);
         uploadButton->setObjectName("uploadButton");
-        uploadButton->setGeometry(QRect(710, 640, 41, 31));
+        uploadButton->setGeometry(QRect(730, 640, 41, 31));
         uploadButton->setStyleSheet(QString::fromUtf8("\n"
 "            QPushButton {\n"
 "              background: #E0E0E0;\n"
@@ -249,7 +249,7 @@ public:
 "          "));
         tradesView = new QTableView(centralwidget);
         tradesView->setObjectName("tradesView");
-        tradesView->setGeometry(QRect(30, 670, 600, 250));
+        tradesView->setGeometry(QRect(30, 670, 740, 250));
         tradesView->setStyleSheet(QString::fromUtf8("\n"
 "            QTableView {\n"
 "              border: none;\n"

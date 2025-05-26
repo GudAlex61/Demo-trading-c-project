@@ -98,7 +98,6 @@ void MainWindow::loadTradingViewChart(const QString& symbol) {
 }
 
 void MainWindow::on_addTradeButton_clicked() {
-    // Проверка выбранного типа позиции
     if (!ui->longRadio->isChecked() && !ui->shortRadio->isChecked()) {
         QMessageBox::warning(this, "Ошибка", "Выберите тип позиции (LONG/SHORT)!");
         return;
@@ -106,32 +105,26 @@ void MainWindow::on_addTradeButton_clicked() {
 
     bool isLong = ui->longRadio->isChecked();
 
-    // Получение данных из полей ввода
     QString cryptoID = ui->comboBox->currentText();
     int leverage = ui->spinBox->value();
     double amount = ui->amountSpinBox->value();
 
-    // Валидация суммы
     if (amount <= 0 || amount > balance) {
         QMessageBox::critical(this, "Ошибка", "Некорректная сумма!");
         return;
     }
 
     try {
-        // Создание и сохранение позиции
         Position newPosition = MakingPosition(cryptoID.toStdString(), isLong, leverage, amount);
         positions.push_back(newPosition);
         
-        // Обновление баланса
         balance -= amount;
         ui->statusbar->showMessage(QString("Баланс: %1").arg(balance));
 
-        // Сохранение в БД
         AuthManager users("UserDB");
         users.saveTrades(userId, positions);
         users.saveBalance(userId, balance);
 
-        // Обновление таблицы
         on_uploadButton_clicked();
 
         QMessageBox::information(this, "Успех", "Позиция успешно создана!");
@@ -143,7 +136,6 @@ void MainWindow::on_addTradeButton_clicked() {
 }
 void MainWindow::on_uploadButton_clicked()
 {
-    // Используем обратный проход для безопасного удаления элементов
     for (int i = positions.size() - 1; i >= 0; --i) {
         if (checkLiquidation(positions[i])) {
             QMessageBox::critical(this, "Ликвидирована позиция", "");
@@ -151,17 +143,15 @@ void MainWindow::on_uploadButton_clicked()
         }
     }
 
-    // Удаляем предыдущую модель, если она существует
     if (model) {
         delete model;
         model = nullptr;
     }
 
-    // Создаем новую модель с актуальным количеством строк
     model = new QStandardItemModel(positions.size(), 4, this);
 
     for (int i = 0; i < positions.size(); i++) {
-        Position& position = positions[i]; // Используем ссылку вместо копии
+        Position& position = positions[i];
         QString name = QString::fromStdString(position.getTokenName());
         QString leverage = QString::number(position.getShoulder());
         QString price = QString::number(position.getEntryPrice(), 'f', 2);
@@ -171,27 +161,22 @@ void MainWindow::on_uploadButton_clicked()
 
         ui->tradesView->setRowHeight(i, 60);
 
-        // Создание элементов с цветовым оформлением
-        QStandardItem* typeItem = new QStandardItem(los + " " + name + "\nх" + leverage);
+        QStandardItem* typeItem = new QStandardItem("          " + los + " " + name + "\n               х" + leverage);
         QStandardItem* priceItem = new QStandardItem("$" + price + "\n$" + myMargin);
         QStandardItem* pnlItem = new QStandardItem("$" + pnl);
 
-        // Установка цветов
         QColor mainColor = position.getIsLong() ? QColor("#4CAF50") : QColor("#F44336");
         typeItem->setForeground(mainColor);
         QColor pnlColor = (position.calculatePnL() >= 0) ? QColor("#4CAF50") : QColor("#F44336");
         pnlItem->setForeground(pnlColor);
 
-        // Выравнивание текста
         priceItem->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
         pnlItem->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
 
-        // Добавление в модель
         model->setItem(i, 0, typeItem);
         model->setItem(i, 1, priceItem);
         model->setItem(i, 2, pnlItem);
 
-        // Кнопка закрытия
         QStandardItem* closeItem = new QStandardItem("×");
         closeItem->setTextAlignment(Qt::AlignCenter);
         closeItem->setEditable(false);
@@ -199,18 +184,20 @@ void MainWindow::on_uploadButton_clicked()
 
     }
 
-    // Настройка таблицы
-    ui->tradesView->verticalHeader()->setVisible(false); // Скрыть номера строк
-ui->tradesView->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed); // Фиксировать ширину
-ui->tradesView->verticalHeader()->setDefaultSectionSize(0); // Установить размер 0
+    ui->tradesView->verticalHeader()->setVisible(false);
+    ui->tradesView->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
 
     ui->tradesView->setModel(model);
-    ui->tradesView->setColumnWidth(0, 220);
-    ui->tradesView->setColumnWidth(1, 200);
+
+    ui->tradesView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Fixed);
+    ui->tradesView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Fixed);
+    ui->tradesView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Fixed);
+    ui->tradesView->setColumnWidth(0, 160);
+    ui->tradesView->setColumnWidth(1, 160);
     ui->tradesView->setColumnWidth(2, 160);
     ui->tradesView->horizontalHeader()->setStretchLastSection(true);
 
-    ui->tradesView->setShowGrid(false); 
+    // ui->tradesView->setShowGrid(false);
     ui->tradesView->setStyleSheet(
         "QTableView::item { border-bottom: 1px solid #EEEEEE; }"
     );

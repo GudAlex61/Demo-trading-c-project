@@ -25,7 +25,7 @@ void Authorization::on_pushButton_clicked()
 
 void Authorization::on_regButton_clicked()
 {
-    hide();
+    this->close();
     regWindow = new Registration(this);
     regWindow->show();
 }

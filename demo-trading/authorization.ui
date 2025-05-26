@@ -60,7 +60,8 @@
        <widget class="QPushButton" name="pushButton">
         <property name="styleSheet">
          <string notr="true">padding: 8px 10px;
-font-size: 10pt;</string>
+font-size: 10pt;
+color: black;</string>
         </property>
         <property name="text">
          <string>Вход</string>
@@ -71,7 +72,8 @@ font-size: 10pt;</string>
        <widget class="QPushButton" name="regButton">
         <property name="styleSheet">
          <string notr="true">padding: 8px 10px;
-font-size: 10pt;</string>
+font-size: 10pt;
+color: black;</string>
         </property>
         <property name="text">
          <string>Регистрация</string>
@@ -88,7 +90,7 @@ font-size: 10pt;</string>
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>19</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

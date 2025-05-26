@@ -38,31 +38,53 @@ public:
         if (Authorization->objectName().isEmpty())
             Authorization->setObjectName("Authorization");
         Authorization->resize(400, 600);
+        Authorization->setStyleSheet(QString::fromUtf8("background-color: white;"));
         centralwidget = new QWidget(Authorization);
         centralwidget->setObjectName("centralwidget");
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(100, 243, 200, 114));
+        groupBox->setGeometry(QRect(100, 243, 200, 121));
+        groupBox->setStyleSheet(QString::fromUtf8("\n"
+"            QGroupBox {\n"
+"              border: 1px solid #E0E0E0;\n"
+"              border-radius: 8px;\n"
+"              margin-top: 0px;\n"
+"              padding-top: 25px;\n"
+"              font: bold 12pt \"Segoe UI\";\n"
+"              color: black;\n"
+"              background: white;\n"
+"            }\n"
+"            QGroupBox::title {\n"
+"			 subcontrol-origin: margin;\n"
+"              left: 5px;\n"
+"			 top: 5px;\n"
+"            }"));
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(10, 30, 171, 71));
+        layoutWidget->setGeometry(QRect(10, 30, 171, 76));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName("pushButton");
+        pushButton->setStyleSheet(QString::fromUtf8("padding: 8px 10px;\n"
+"font-size: 10pt;\n"
+"color: black;"));
 
         verticalLayout->addWidget(pushButton);
 
         regButton = new QPushButton(layoutWidget);
         regButton->setObjectName("regButton");
+        regButton->setStyleSheet(QString::fromUtf8("padding: 8px 10px;\n"
+"font-size: 10pt;\n"
+"color: black;"));
 
         verticalLayout->addWidget(regButton);
 
         Authorization->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Authorization);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 400, 19));
+        menubar->setGeometry(QRect(0, 0, 400, 23));
         Authorization->setMenuBar(menubar);
         statusbar = new QStatusBar(Authorization);
         statusbar->setObjectName("statusbar");

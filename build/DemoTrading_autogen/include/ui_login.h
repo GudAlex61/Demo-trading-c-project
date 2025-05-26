@@ -18,6 +18,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -25,6 +26,8 @@ class Ui_login
 {
 public:
     QGroupBox *groupBox;
+    QPushButton *backButton;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -40,22 +43,56 @@ public:
         if (login->objectName().isEmpty())
             login->setObjectName("login");
         login->resize(400, 600);
+        login->setStyleSheet(QString::fromUtf8("background-color: white;"));
         groupBox = new QGroupBox(login);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(100, 240, 200, 120));
-        verticalLayout_2 = new QVBoxLayout(groupBox);
+        groupBox->setGeometry(QRect(100, 240, 200, 171));
+        groupBox->setStyleSheet(QString::fromUtf8("\n"
+"            QGroupBox {\n"
+"              border: 1px solid #E0E0E0;\n"
+"              border-radius: 8px;\n"
+"              margin-top: 0px;\n"
+"              padding-top: 25px;\n"
+"              font: bold 12pt \"Segoe UI\";\n"
+"              color: black;\n"
+"              background: white;\n"
+"            }\n"
+"            QGroupBox::title {\n"
+"			 subcontrol-origin: margin;\n"
+"              left: 5px;\n"
+"			 top: 5px;\n"
+"            }"));
+        backButton = new QPushButton(groupBox);
+        backButton->setObjectName("backButton");
+        backButton->setGeometry(QRect(160, 5, 31, 21));
+        backButton->setStyleSheet(QString::fromUtf8("            QPushButton {\n"
+"              background: #E0E0E0;\n"
+"              color: #616161;\n"
+"              border-radius: 6px;\n"
+"              font: bold 12pt \"Segoe UI\";\n"
+"            }\n"
+"            QPushButton:hover {\n"
+"              background: #BDBDBD;\n"
+"            }"));
+        layoutWidget = new QWidget(groupBox);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(10, 35, 184, 126));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget);
         verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        label = new QLabel(groupBox);
+        label = new QLabel(layoutWidget);
         label->setObjectName("label");
+        label->setStyleSheet(QString::fromUtf8("color: black;"));
 
         horizontalLayout->addWidget(label);
 
-        log = new QLineEdit(groupBox);
+        log = new QLineEdit(layoutWidget);
         log->setObjectName("log");
+        log->setStyleSheet(QString::fromUtf8("color: black;"));
         log->setMaxLength(12);
 
         horizontalLayout->addWidget(log);
@@ -65,13 +102,15 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_2 = new QLabel(groupBox);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName("label_2");
+        label_2->setStyleSheet(QString::fromUtf8("color: black;"));
 
         horizontalLayout_2->addWidget(label_2);
 
-        pass = new QLineEdit(groupBox);
+        pass = new QLineEdit(layoutWidget);
         pass->setObjectName("pass");
+        pass->setStyleSheet(QString::fromUtf8("color: black;"));
         pass->setMaxLength(12);
 
         horizontalLayout_2->addWidget(pass);
@@ -82,8 +121,11 @@ public:
 
         verticalLayout_2->addLayout(verticalLayout);
 
-        pushButton = new QPushButton(groupBox);
+        pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName("pushButton");
+        pushButton->setStyleSheet(QString::fromUtf8("padding: 8px 10px;\n"
+"font-size: 10pt;\n"
+"color: black;"));
 
         verticalLayout_2->addWidget(pushButton);
 
@@ -97,6 +139,7 @@ public:
     {
         login->setWindowTitle(QCoreApplication::translate("login", "Demo-Trading", nullptr));
         groupBox->setTitle(QCoreApplication::translate("login", "\320\222\321\205\320\276\320\264", nullptr));
+        backButton->setText(QCoreApplication::translate("login", "\342\254\205", nullptr));
         label->setText(QCoreApplication::translate("login", "\320\233\320\276\320\263\320\270\320\275", nullptr));
         log->setText(QString());
         label_2->setText(QCoreApplication::translate("login", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));

@@ -214,6 +214,10 @@ void MainWindow::onTradeClicked(const QModelIndex &index)
             AuthManager Users("UserDB");
             Users.saveTrades(userId, positions);
             Users.saveBalance(userId, balance);
+
+            QString Message = QString::fromStdString("Закрыта позиция! PnL: " + std::to_string(positions[row].calculatePnL()) + "$");
+
+            QMessageBox::information(this, "", Message);
             
             on_uploadButton_clicked();
             ui->statusbar->showMessage(QString("Баланс: %1").arg(balance));
